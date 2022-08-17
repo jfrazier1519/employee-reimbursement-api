@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Project 1 Login</title>
+
+<link rel="stylesheet" type="text/css" href="/HelloServlets/resources/css/mystyles.css"/>
+</head>
+<body>
+
+	<div class=supervillain-container>
+		<h1>Welcome to Project 1</h1>
+		<p>Please enter your login information below</p>
+		
+		
+		
+		<!-- DIRECT SERVLET EXAMPLE -->
+		<!-- <form method="GET" action="https://www.google.com"> -->
+		<!-- <form method="GET" action="http://localhost:9002/HelloServlets/direct"> -->
+		<form method="GET" action="/HelloServlets/direct">
+			<p>Direct Servlet, GET</p>
+			<input type="submit" value="Direct Response HTML">
+		</form>
+		
+		<form method="POST" action="/HelloServlets/direct">
+			<p>Direct Servlet, POST</p>
+			<input type="submit" value="Direct Response JSON">
+		</form>
+		
+		
+		
+		<!-- USER INPUT WITH FORM FIELDS -->
+		<form method="GET" action="/HelloServlets/userinput">
+			<p>User Input Servlet, GET</p>
+			Username:<input type="text" name="myUsername" placeholder="da username">
+			Password:<input type="text" name="myPassword" placeholder="da password">
+			<input type="submit" value="Accept Form Field Data (Get)">
+		</form>
+		
+		<form method="POST" action="/HelloServlets/userinput">
+			<p>User Input Servlet, POST</p>
+			<input type="text" name="myUsername" placeholder="da username">
+			<input type="text" name="myPassword" placeholder="da password">
+			<input type="submit" value="Accept Form Field Data (Post)">
+		</form>
+		
+		
+		
+		<!-- INDIRECT SERVLET EXAMPLE -->
+		<form method="GET" action="/HelloServlets/indirect">
+			<p>Indirect Servlet, GET</p>
+			<input type="submit" value="Indirect Response Redirect">
+		</form>
+		
+		<form method="POST" action="/HelloServlets/indirect">
+			<p>Indirect Servlet, POST</p>
+			<input type="submit" value="Indirect Response Forward">
+		</form>
+		
+		
+		
+		
+		<!-- SESSION SERVLET EXAMPLE -->
+		<form method="GET" action="/HelloServlets/sesserv">
+			<p>Session Servlet, GET</p>
+			<input type="submit" value="Session Servlet 'Login'">
+		</form>
+		
+		
+		<form method="POST" action="/HelloServlets/sesserv">
+			<p>Session Servlet, POST</p>
+			<input type="text" name="myname" placeholder="villname"/>
+			<input type="text" name="mysuperpower" placeholder="superpower"/>
+			<input type="number" name="mybounty" placeholder="value of bounty ($)"/>
+			<input type="submit" value="Session Servlet 'Login'">
+		</form>
+		
+		<!-- HELPER SESSION SERVLET EXAMPLE -->
+		<form method="GET" action="/HelloServlets/helpsesserv">
+			<p>HELPER Session Servlet, GET</p>
+			<input type="submit" value="Helper Session Servlet 'Retrieve Villain!'">
+		</form>
+		
+		<form method="POST" action="/HelloServlets/helpsesserv">
+			<p>HELPER Session Servlet, POST</p>
+			<input type="submit" value="Helper Session Servlet 'Logout'">
+		</form>
+	</div>
+</body>
+</html>
