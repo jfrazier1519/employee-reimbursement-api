@@ -1,5 +1,6 @@
 package dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +25,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		
 //	}
 	
-	
+	/**
+	 * Necessary to establish a connection to database
+	 */
     static { 
           try {
               Class.forName("org.postgresql.Driver");

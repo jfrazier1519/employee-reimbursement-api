@@ -19,6 +19,14 @@ import service.TicketServiceImpl;
 
 public class ManagerController extends LoginController {
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager retrieves a list of all employees in the system.
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewAllEmployees(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		EmployeeService employee = new EmployeeServiceImpl();
@@ -40,6 +48,14 @@ public class ManagerController extends LoginController {
 	}
 
 /////////////////////////////////////////////
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager can change the role of an employee.
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void changeRole(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		EmployeeService employee = new EmployeeServiceImpl();
@@ -83,7 +99,15 @@ public class ManagerController extends LoginController {
 
 	}
 	///////////////////////////////////////
-
+	
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager retrieves a list of all tickets in the system
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewAllTickets(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -103,6 +127,14 @@ public class ManagerController extends LoginController {
 
 	}
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager retrieves a ticket by primary key (id)
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewTicketById(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -128,6 +160,14 @@ public class ManagerController extends LoginController {
 
 	}
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager approves a reimbursement ticket via the ticket id
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void approveTicket(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -157,6 +197,14 @@ public class ManagerController extends LoginController {
 
 	}
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager denies a reimbursement ticket via the ticket id
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void denyTicket(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -186,6 +234,14 @@ public class ManagerController extends LoginController {
 
 	}
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager can add a new employee to the database via a JSON object.
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void createEmployee(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		EmployeeService employee = new EmployeeServiceImpl();
@@ -212,6 +268,14 @@ public class ManagerController extends LoginController {
 
 	}
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager can view all the tickets for a specific employee
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewTicketByEmployee(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -234,6 +298,14 @@ public class ManagerController extends LoginController {
 
 	}
 
+	/**
+	 * Method checks current session to see if a manager is logged in. 
+	 * If true, a manager can view all tickets filtered by status (pending, approved, denied).
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewAllTicketsByStatus(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();

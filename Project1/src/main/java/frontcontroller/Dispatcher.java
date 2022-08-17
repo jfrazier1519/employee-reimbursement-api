@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.EmployeeController;
-import controller.HomeController;
 import controller.LoginController;
 import controller.ManagerController;
 
@@ -76,22 +75,6 @@ public class Dispatcher {
 				case "/Project1/manager/denyticket":
 					System.out.println("You are calling the manager deny ticket method");
 					ManagerController.denyTicket(req, resp);
-				break;
-				case "/Project1/home":
-					System.out.println("You are calling the main html page");
-					HomeController.home(req, resp);
-				break;
-				case "/Project1/login/loginwithhtml":
-					System.out.println("You are calling login");
-					LoginController.loginWithHtml(req, resp);
-				break;
-				case "/Project1/home/manager":
-					System.out.println("You are going to manager home");
-					HomeController.managerHome(req, resp);
-				break;
-				case "/Project1/home/employee":
-					System.out.println("You are going to employee home");
-//					LoginController.loginForwardResponse(req, resp);
 				break;
 				default: 
 					System.out.println("Bad URI path. Try Again.");;

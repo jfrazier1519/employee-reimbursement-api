@@ -18,8 +18,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 		EmployeeService employ = new EmployeeServiceImpl();
 	
-//		employ.demoteToEmployee(1);
-//		employ.promoteToManager(1);
+
 		
 		
 	}
@@ -51,11 +50,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 		return boolResults;
 		
-//		if(employee.getEmployeeRole() == "manager") {
-//			System.out.println("is already a manager");
-//			return false;
-//		}else
-//			return myEmployeeDao.updateEmployeeToManager(employeeId);
+
 		
 	}
 	
@@ -66,11 +61,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 		return boolResults;
 		
-//		if((employee.getEmployeeId(employeeId)).getEmployeeRole() == "employee") {
-//			System.out.println("is already an employee");
-//			return false;
-//		}else
-//			return myEmployeeDao.updateManagerToEmployee(employeeId);
+
 
 		
 		

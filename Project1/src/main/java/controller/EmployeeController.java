@@ -17,6 +17,14 @@ import service.TicketServiceImpl;
 
 public class EmployeeController {
 
+	/**
+	 * Method checks current session to see if an employee is logged in. 
+	 * If true, an employee can submit a ticket via field parameters.
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void submitTicket(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -47,6 +55,14 @@ public class EmployeeController {
 
 	}
 
+	/**
+	 * Method checks current session to see if an employee is logged in. 
+	 * If true, an employee can view his/her previous requests filtered by status
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewTicketsByStatus(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
@@ -72,6 +88,14 @@ public class EmployeeController {
 
 	}
 
+	/**
+	 * Method checks current session to see if an employee is logged in. 
+	 * If true, an employee can view his/her tickets filtered by type.
+	 * 
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
 	public static void viewTicketsByType(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		TicketService ticket = new TicketServiceImpl();
